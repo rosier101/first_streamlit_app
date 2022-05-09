@@ -14,8 +14,9 @@ import pandas
 
 #have pandas read CSV file from S3 bucket. We use a pandas called function called read_csv to pull data into a dataframe 
 my_fruit_list = pandas.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt")
+my_fruit_list = my_fruit_list.set_index('Fruit')
 
-#After pulling the data into a pandas darafram called my_fruit_list, we will ask teh streamlit library to display it on the page
+#After pulling the data into a pandas darafram called my_fruit_list, we will ask the streamlit library to display it on the page
 streamlit.dataframe(my_fruit_list)
 
 #add a user interactive widget called multi-select that will allow users to pick the fruits they want in their smoothies
