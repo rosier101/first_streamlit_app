@@ -20,7 +20,7 @@ my_fruit_list = my_fruit_list.set_index('Fruit')
 streamlit.dataframe(my_fruit_list)
 
 #add a user interactive widget called multi-select that will allow users to pick the fruits they want in their smoothies
-fruit_selected = streamlit.multiselect("Pick some fruits:", list(my_fruit_list.index),['Avocado', 'Strawberries'])
+fruits_selected = streamlit.multiselect("Pick some fruits:", list(my_fruit_list.index),['Avocado', 'Strawberries'])
 #ask app to put the list of selected fruits into a variable fruit select (as seen in previous line) then we'll ask our app to use the fruits in our fruits_select list
 #to pull rows from the full data set. 
 fruits_to_show = my_fruit_list.loc[fruits_selected]
