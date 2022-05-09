@@ -20,7 +20,7 @@ my_fruit_list = my_fruit_list.set_index('Fruit')
 streamlit.dataframe(my_fruit_list)
 
 #add a user interactive widget called multi-select that will allow users to pick the fruits they want in their smoothies
-streamlit.multiselect("Pick some fruits:", list(my_fruit_list.index))
+streamlit.multiselect("Pick some fruits:", list(my_fruit_list.index), ['Avovado', 'Strawberries'])
 
 #display the table on the page
 streamlit.dataframe(my_fruit_list)
